@@ -1,0 +1,162 @@
+{
+  "browser": "144.0.7559.96",
+  "results": [
+    [
+      "T01",
+      "PASS",
+      "Harga, stok, ukuran awal, qty dan tiga thumbnail sesuai; SVG termuat."
+    ],
+    [
+      "T02",
+      "PASS",
+      "S/L aktif bergantian; ringkasan L dan satu active state."
+    ],
+    [
+      "T03",
+      "PASS",
+      "Qty 3 menampilkan Rp450.000."
+    ],
+    [
+      "T04",
+      "PASS",
+      "Input 0 ditolak, error tampil, tombol disabled, subtotal —, cart 0."
+    ],
+    [
+      "T05",
+      "PASS",
+      "Input -1 ditolak, error tampil, tombol disabled, subtotal —, cart 0."
+    ],
+    [
+      "T06",
+      "PASS",
+      "Input 1.5 ditolak, error tampil, tombol disabled, subtotal —, cart 0."
+    ],
+    [
+      "T07",
+      "PASS",
+      "Input 11 ditolak, error tampil, tombol disabled, subtotal —, cart 0."
+    ],
+    [
+      "T08",
+      "PASS",
+      "Input kosong ditolak, error tampil, tombol disabled, subtotal —, cart 0."
+    ],
+    [
+      "T09",
+      "PASS",
+      "Qty 2 valid kembali, error hilang, Rp300.000."
+    ],
+    [
+      "T10",
+      "PASS",
+      "Minus disabled pada 1, plus disabled pada 10; 9 + 1 = 10."
+    ],
+    [
+      "T11",
+      "PASS",
+      "M ×2: count 2, total Rp300.000, feedback sukses."
+    ],
+    [
+      "T12",
+      "PASS",
+      "M ×3 dan L ×2: dua baris, 5 unit, Rp750.000."
+    ],
+    [
+      "T13",
+      "PASS",
+      "Tambah 6 saat cart 5 ditolak; count tetap 5."
+    ],
+    [
+      "T14",
+      "PASS",
+      "Drawer +/− memperbarui count 6 lalu 5 dan total Rp900.000 lalu Rp750.000."
+    ],
+    [
+      "T15",
+      "PASS",
+      "Hapus semua: count 0, empty state, Rp0, checkout disabled."
+    ],
+    [
+      "T16",
+      "PASS",
+      "Thumbnail, next/prev, alt, posisi, aria-pressed sinkron."
+    ],
+    [
+      "T17",
+      "PASS",
+      "Index terakhir next ke 01, pertama prev ke 03."
+    ],
+    [
+      "T18",
+      "PASS",
+      "Zoom, navigasi tombol/keyboard, sinkronisasi dan close berfungsi."
+    ],
+    [
+      "T19",
+      "PASS",
+      "Batal checkout: cart 2 tetap, modal tertutup."
+    ],
+    [
+      "T20",
+      "PASS",
+      "Promise reject: loading lalu pesan gagal; cart 2, retry aktif."
+    ],
+    [
+      "T21",
+      "PASS",
+      "Retry resolve: pesan sukses, cart 0, loading hilang, confirm disabled."
+    ],
+    [
+      "T22",
+      "PASS",
+      "Dua click sinkron: confirm/close disabled, satu loading aktif."
+    ],
+    [
+      "T23",
+      "PASS",
+      "Escape saat pending tidak menutup dialog; proses selesai sukses."
+    ],
+    [
+      "T24",
+      "PASS",
+      "Toast baru bertahan melewati timer lama; close manual dan auto-hide berfungsi."
+    ],
+    [
+      "T25",
+      "PASS",
+      "1440/390 px: tidak ada horizontal overflow, drawer dapat dibuka."
+    ],
+    [
+      "Q01",
+      "PASS",
+      "Feedback lama dibersihkan saat plus/minus."
+    ],
+    [
+      "Q02",
+      "PASS",
+      "Stok gabungan 10 mengunci penambahan; pengurangan mengembalikan satu unit."
+    ],
+    [
+      "Q03",
+      "PASS",
+      "Checkout sukses mengosongkan cart dan menyinkronkan stok serta total."
+    ],
+    [
+      "Q04",
+      "PASS",
+      "Fokus dipulihkan ke kontrol pengganti, atau tombol tutup setelah item dihapus."
+    ],
+    [
+      "Q05",
+      "PASS",
+      "Reduced motion menonaktifkan transform, transition tombol dan animasi drawer."
+    ],
+    [
+      "T26",
+      "PASS",
+      "Tidak ada pageerror atau fetch/XHR pada alur uji."
+    ]
+  ],
+  "errors": [],
+  "requests": []
+}
