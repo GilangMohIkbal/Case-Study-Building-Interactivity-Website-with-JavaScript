@@ -1,4 +1,4 @@
-# Studio Basics — Interactive Product Detail
+# Case Study Building Interactivity Website with JavaScript
 
 **Assignment Day 22 — Adding Interactivity to Websites with JavaScript**
 
