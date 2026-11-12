@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3ed" />
+    <meta
+      name="description"
+      content="Studio Basics — detail Kemeja Linen Biru, latihan frontend Day 22."
+    />
+    <title>Kemeja Linen Biru — Studio Basics</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/product-data.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      STUDIO BASICS <span>✳</span> Everyday essentials, thoughtfully made
+    </div>
+    <header class="header wrap">
+      <a class="brand" href="index.html" aria-label="Studio Basics, beranda"
+        >STUDIO<span>BASICS<span class="brand-dot">.</span></span></a
+      >
+      <nav aria-label="Navigasi utama">
+        <a href="#product">Koleksi</a
+        ><a href="#details">Material &amp; detail</a
+        ><a href="#about">Tentang studio</a>
+      </nav>
+      <button
+        class="bag-btn"
+        id="cart-open"
+        type="button"
+        aria-haspopup="dialog"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8h14l1 13H4L5 8Z M9 9V6a3 3 0 0 1 6 0v3" /></svg
+        ><span>Tas</span
+        ><span class="bag-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+    </header>
+    <main class="wrap" id="product">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Beranda</a><span>/</span
+        ><a href="#product">Koleksi linen</a><span>/</span
+        ><span aria-current="page">Kemeja Linen Biru</span>
+      </nav>
+      <section class="product-grid" aria-labelledby="product-title">
+        <div class="gallery">
+          <div class="hero">
+            <img
+              id="hero-image"
+              src="assets/linen-blue-front.svg"
+              alt="Ilustrasi Kemeja Linen Biru tampak depan"
+              width="900"
+              height="1080"
+            />
+            <div class="image-badge">THE LINEN EDIT <span>01</span></div>
+            <button
+              id="gallery-zoom"
+              class="icon-btn zoom"
+              type="button"
+              aria-label="Perbesar gambar"
+              aria-haspopup="dialog"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />
+              </svg>
+            </button>
+            <div class="gallery-controls">
+              <button
+                id="gallery-prev"
+                type="button"
+                class="icon-btn"
+                aria-label="Gambar sebelumnya"
+              >
+                ←</button
+              ><span id="gallery-position" aria-live="polite">01 / 03</span
+              ><button
+                id="gallery-next"
+                type="button"
+                class="icon-btn"
+                aria-label="Gambar berikutnya"
+              >
+                →
+              </button>
+            </div>
+          </div>
+          <div
+            class="thumbnails"
+            id="gallery-thumbnails"
+            role="group"
+            aria-label="Pilih gambar produk"
+          >
+            <button
+              type="button"
+              class="thumb is-active"
+              data-index="0"
+              aria-pressed="true"
+            >
+              <img src="assets/linen-blue-front.svg" alt="Tampak depan" />
+            </button>
+            <button
+              type="button"
+              class="thumb"
+              data-index="1"
+              aria-pressed="false"
+            >
+              <img src="assets/linen-blue-back.svg" alt="Tampak belakang" />
+            </button>
+            <button
+              type="button"
+              class="thumb"
+              data-index="2"
+              aria-pressed="false"
+            >
+              <img
+                src="assets/linen-blue-detail.svg"
+                alt="Detail kain dan kancing"
+              />
+            </button>
+            <p>
+              Designed for the everyday.<br /><span
+                >Ilustrasi produk demo.</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="eyebrow">
+            <span class="dot"></span> EVERYDAY COLLECTION / 01
+          </div>
+          <h1 id="product-title">Kemeja<br />Linen Biru<span>.</span></h1>
+          <div class="price-row">
+            <p id="product-price" class="price">Rp150.000</p>
+            <span class="stock-pill"
+              ><span class="dot"></span>
+              <span id="stock-label">10 tersedia</span></span
+            >
+          </div>
+          <p class="intro">
+            Siluet santai, tekstur linen yang ringan, dan rona biru yang mudah
+            dipadukan. Sebuah esensial untuk hari-hari yang bergerak pelan.
+          </p>
+          <div class="color-row">
+            <span class="swatch"></span
+            ><span>Warna <strong>Dusty Blue</strong></span
+            ><span class="small-label">UNISEX FIT</span>
+          </div>
+          <form id="product-form" novalidate>
+            <fieldset class="size-field">
+              <legend>Ukuran <span id="selected-size">M</span></legend>
+              <div id="size-options" class="size-options">
+                <button type="button" data-size="S" aria-pressed="false">
+                  S</button
+                ><button
+                  type="button"
+                  data-size="M"
+                  class="is-active"
+                  aria-pressed="true"
+                >
+                  M</button
+                ><button type="button" data-size="L" aria-pressed="false">
+                  L
+                </button>
+              </div>
+            </fieldset>
+            <div class="quantity-row">
+              <div>
+                <label for="quantity">Jumlah</label>
+                <div class="stepper">
+                  <button
+                    id="qty-minus"
+                    type="button"
+                    aria-label="Kurangi jumlah"
+                  >
+                    −</button
+                  ><input
+                    id="quantity"
+                    type="number"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="1"
+                    required
+                    aria-describedby="quantity-error"
+                  /><button
+                    id="qty-plus"
+                    type="button"
+                    aria-label="Tambah jumlah"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="subtotal">
+                <span>Subtotal pilihan</span
+                ><strong id="subtotal" aria-live="polite">Rp150.000</strong>
+              </div>
+            </div>
+            <p class="field-error" id="quantity-error" role="status" hidden></p>
+            <p class="selection" id="selection-summary" aria-live="polite">
+              Ukuran M · 1 item
+            </p>
+            <button type="button" class="primary add-btn" id="add-to-cart">
+              <span>Tambah ke tas</span><span aria-hidden="true">↗</span>
+            </button>
+            <p
+              class="feedback"
+              id="product-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+          <div class="assurances">
+            <span>✳ &nbsp; Linen ringan</span
+            ><span>◎ &nbsp; Potongan santai</span
+            ><span>↻ &nbsp; Mudah dirawat</span>
+          </div>
+          <div class="details" id="details">
+            <details open>
+              <summary>Deskripsi produk <span>+</span></summary>
+              <p>
+                Kemeja linen biru dengan potongan santai. Tersedia dalam ukuran
+                S, M, dan L. Harga Rp150.000 per item. Produk ini merupakan data
+                hardcoded untuk latihan frontend.
+              </p>
+            </details>
+            <details>
+              <summary>Material &amp; perawatan <span>+</span></summary>
+              <p>
+                Ilustrasi koleksi linen. Untuk demo, cuci dengan air dingin dan
+                keringkan alami.
+              </p>
+            </details>
+            <details>
+              <summary>Pengiriman &amp; pembayaran <span>+</span></summary>
+              <p>
+                Website pembelajaran. Tidak memproses pengiriman, pembayaran,
+                atau transaksi sungguhan.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="editorial" id="about">
+        <div>
+          <p class="eyebrow">A LITTLE LESS, A LITTLE BETTER.</p>
+          <h2>Made for<br />the everyday<span>.</span></h2>
+        </div>
+        <p>
+          Studio Basics percaya bahwa hal-hal sederhana dapat menjadi bagian
+          terbaik dari keseharian. Koleksi linen ini adalah studi tentang
+          kenyamanan, warna, dan bentuk yang tidak berlebihan.
+        </p>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <a class="brand" href="index.html">STUDIO<span>BASICS.</span></a>
+      <p>Product study · Day 22 · Vanilla JavaScript</p>
+      <span>Demo edukasi / 2026</span>
+    </footer>
+    <!-- Dialog sengaja tertutup. TODO: buka/tutup melalui JavaScript. -->
+    <dialog id="cart-dialog" class="drawer" aria-labelledby="cart-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">YOUR SELECTION</p>
+          <h2 id="cart-title">
+            Tas belanja <span id="cart-dialog-count">(0)</span>
+          </h2>
+        </div>
+        <button
+          type="button"
+          class="icon-btn"
+          id="cart-close"
+          aria-label="Tutup tas"
+        >
+          ×
+        </button>
+      </div>
+      <div class="cart-content">
+        <div id="cart-empty" class="empty">
+          <span class="empty-symbol">◎</span>
+          <h3>Tas masih kosong</h3>
+          <p>Tambahkan kemeja favoritmu.</p>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+      </div>
+      <div class="cart-bottom">
+        <div class="total-row">
+          <span>Total</span><strong id="cart-total">Rp0</strong>
+        </div>
+        <button type="button" class="primary" id="checkout-open" disabled>
+          Lanjutkan checkout <span>↗</span>
+        </button>
+        <p class="muted">Simulasi pembelajaran · Tanpa pembayaran nyata</p>
+      </div>
+    </dialog>
+    <template id="cart-item-template"
+      ><article class="cart-item">
+        <img
+          class="item-image"
+          src="assets/linen-blue-front.svg"
+          alt="Ilustrasi kemeja"
+        />
+        <div>
+          <h3 class="item-name">Kemeja Linen Biru</h3>
+          <p class="item-size"></p>
+          <div class="item-stepper">
+            <button
+              type="button"
+              data-action="decrease"
+              aria-label="Kurangi jumlah item"
+            >
+              −</button
+            ><span class="item-quantity"></span
+            ><button
+              type="button"
+              data-action="increase"
+              aria-label="Tambah jumlah item"
+            >
+              +
+            </button>
+          </div>
+          <button type="button" class="remove" data-action="remove">
+            Hapus
+          </button>
+        </div>
+        <strong class="item-total"></strong></article
+    ></template>
+    <dialog id="checkout-dialog" class="modal" aria-labelledby="checkout-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">FINAL REVIEW</p>
+          <h2 id="checkout-title">Konfirmasi pesanan</h2>
+        </div>
+        <button
+          type="button"
+          class="icon-btn"
+          id="checkout-close"
+          aria-label="Tutup konfirmasi"
+        >
+          ×
+        </button>
+      </div>
+      <p id="checkout-summary">Belum ada pesanan.</p>
+      <div class="total-row">
+        <span>Total pesanan</span><strong id="checkout-total">Rp0</strong>
+      </div>
+      <fieldset class="scenario">
+        <legend>Skenario latihan asynchronous</legend>
+        <label
+          ><input
+            type="radio"
+            name="checkout-scenario"
+            value="success"
+            checked
+          />
+          Berhasil</label
+        ><label
+          ><input type="radio" name="checkout-scenario" value="error" />
+          Gagal</label
+        >
+      </fieldset>
+      <div id="checkout-loading" class="loading" role="status" hidden>
+        <span class="spinner" aria-hidden="true"></span> Memproses pesanan…
+      </div>
+      <p id="checkout-feedback" role="status" aria-live="polite"></p>
+      <div class="modal-actions">
+        <button class="secondary" id="checkout-cancel" type="button">
+          Batal</button
+        ><button class="primary" id="checkout-confirm" type="button">
+          Konfirmasi demo
+        </button>
+      </div>
+      <p class="muted">Tidak ada request server atau pembayaran.</p>
+    </dialog>
+    <dialog
+      id="zoom-dialog"
+      class="zoom-modal"
+      aria-label="Perbesar gambar produk"
+    >
+      <button
+        type="button"
+        class="icon-btn zoom-close"
+        id="zoom-close"
+        aria-label="Tutup galeri"
+      >
+        ×</button
+      ><img
+        id="zoom-image"
+        src="assets/linen-blue-front.svg"
+        alt="Ilustrasi Kemeja Linen Biru"
+      />
+      <div class="zoom-actions">
+        <button
+          id="zoom-prev"
+          class="icon-btn"
+          type="button"
+          aria-label="Gambar sebelumnya"
+        >
+          ←</button
+        ><span id="zoom-position">01 / 03</span
+        ><button
+          id="zoom-next"
+          class="icon-btn"
+          type="button"
+          aria-label="Gambar berikutnya"
+        >
+          →
+        </button>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+      <span class="toast-icon" aria-hidden="true">✓</span>
+      <p id="toast-message"></p>
+      <button
+        class="icon-btn"
+        id="toast-close"
+        type="button"
+        aria-label="Tutup notifikasi"
+      >
+        ×
+      </button>
+    </div>
+  </body>
+</html>

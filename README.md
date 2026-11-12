@@ -1,4 +1,4 @@
-# Studio Basics — Day 22 Starter Project
+# Assignment - Case Study Building Interactivity Website with JavaScript
 
 Kelanjutan frontend hardcoded **Product 1 / Kemeja Linen Biru** dari Study Case Phase 1. Starter ini sengaja belum mengimplementasikan logika interaktif, agar peserta dapat mengerjakan sendiri materi DOM, event handling, state, dan asynchronous JavaScript.
 
